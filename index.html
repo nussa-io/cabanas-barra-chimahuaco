@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cabañas Barra · Barra de la Cruz, Oaxaca</title>
+  <meta name="description" content="Habitaciones, renta de tablas y surf trips en Barra de la Cruz, Oaxaca. Rooms, surfboard rentals and surf trips.">
+  <link rel="alternate" hreflang="es" href="https://nussa-io.github.io/cabanas-barra-chimahuaco/es/">
+  <link rel="alternate" hreflang="en" href="https://nussa-io.github.io/cabanas-barra-chimahuaco/en/">
+  <link rel="alternate" hreflang="x-default" href="https://nussa-io.github.io/cabanas-barra-chimahuaco/es/">
+  <script>
+    // Send visitors to their language. Spanish is the default.
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("lang"); } catch (e) {}
+      var lang = saved || ((navigator.languages && navigator.languages[0]) || navigator.language || "es");
+      location.replace(lang.toLowerCase().indexOf("en") === 0 ? "en/index.html" : "es/index.html");
+    })();
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="section container" style="text-align:center">
+    <h1>Cabañas Barra</h1>
+    <div class="btn-row" style="justify-content:center">
+      <a class="btn btn-primary" href="es/index.html" hreflang="es">Español</a>
+      <a class="btn btn-secondary" href="en/index.html" hreflang="en">English</a>
+    </div>
+  </main>
+</body>
+</html>
