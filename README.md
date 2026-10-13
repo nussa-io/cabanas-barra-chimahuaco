@@ -50,7 +50,7 @@ and paste it into the `<iframe>` in `es/index.html` and `en/index.html`.
 
 Double-click `es/index.html`, or run `python3 -m http.server` in this folder and open http://localhost:8000.
 
-## Publishing (free)
+## Publishing
 
-GitHub → repository Settings → Pages → Source: "Deploy from a branch" → `main` / root.
-The site will be at https://nussa-io.github.io/cabanas-barra-chimahuaco/
+Live at https://cabanasbarra.netlify.app — hosted free on Netlify.
+Netlify redeploys automatically every time a change is pushed to `main` on GitHub.
