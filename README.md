@@ -52,5 +52,5 @@ Double-click `es/index.html`, or run `python3 -m http.server` in this folder and
 
 ## Publishing
 
-Live at https://cabanasbarra.netlify.app — hosted free on Netlify.
-Netlify redeploys automatically every time a change is pushed to `main` on GitHub.
+Live at https://nussa-io.github.io/cabanas-barra-chimahuaco — hosted free on GitHub Pages.
+GitHub Pages republishes automatically every time a change is pushed to `main`.
