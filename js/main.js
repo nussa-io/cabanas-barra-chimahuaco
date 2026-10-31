@@ -33,6 +33,30 @@
     });
   });
 
+  // Photo galleries: tap a photo to see it large (links open the photo without JS)
+  var zoomLinks = document.querySelectorAll("[data-zoom]");
+  if (zoomLinks.length && typeof HTMLDialogElement === "function") {
+    var closeLabel = root.lang === "en" ? "Close" : "Cerrar";
+    var box = document.createElement("dialog");
+    box.className = "lightbox";
+    box.innerHTML = '<img alt=""><p></p><button class="lightbox-close" type="button" aria-label="' + closeLabel + '">&times;</button>';
+    document.body.appendChild(box);
+    var boxImg = box.querySelector("img");
+    var boxText = box.querySelector("p");
+    box.querySelector("button").addEventListener("click", function () { box.close(); });
+    box.addEventListener("click", function (e) { if (e.target === box) box.close(); });
+    zoomLinks.forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        var img = link.querySelector("img");
+        boxImg.src = link.getAttribute("href");
+        boxImg.alt = img ? img.alt : "";
+        boxText.textContent = img ? img.alt : "";
+        box.showModal();
+      });
+    });
+  }
+
   // Current year in the footer
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = new Date().getFullYear();
