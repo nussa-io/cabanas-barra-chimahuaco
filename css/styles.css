@@ -353,6 +353,8 @@ a:hover { color: var(--teal-dark); }
   object-fit: cover;
   border-radius: var(--sketch);
 }
+.photo--tall { aspect-ratio: 4 / 5; }
+.photo--wide { aspect-ratio: 16 / 9; }
 
 /* ---------- Hero ---------- */
 
@@ -470,7 +472,7 @@ a:hover { color: var(--teal-dark); }
 @media (min-width: 820px) { .room-feature { grid-template-columns: 1.1fr 1fr; gap: 3rem; } }
 
 .room-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
-.room-gallery .ph:first-child { grid-column: 1 / -1; }
+.room-gallery > :first-child { grid-column: 1 / -1; }
 
 .feature-list { list-style: none; padding: 0; margin: 0 0 1.5rem; display: grid; gap: 0.9rem; }
 .feature-list li { display: flex; gap: 0.85rem; align-items: center; font-weight: 600; }
